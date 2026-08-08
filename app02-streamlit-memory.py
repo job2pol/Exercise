@@ -20,8 +20,15 @@ USE_STORAGE_TYPE = "sqlite"  # Options: "sqlite" | "memory"
 # =====================================================================
 class PatientModel:
     """Manages volatile in-memory patient data storage and initial data cleaning."""
-    
+
     def __init__(self):
         self._raw_patients: Dict[int, Dict[str, float]] = {
-            101: {"Glucose": 95.0, "BMI": 22.5, "Age": 28.0, "BloodPressure": 115.0},
-            102: {"Glucose": 145.0, "BMI": 0.0, "Age": 54.0, 
+            101: {
+                "Glucose": 95.0,
+                "BMI": 22.5,
+                "Age": 28.0,
+                "BloodPressure": 115.0
+            },
+            102: {
+                "Glucose": 145.0,
+          
